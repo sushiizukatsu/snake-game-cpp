@@ -251,3 +251,8 @@ int main()
     emscripten_set_main_loop(mainLoop, 0, 1);  // メインループ設定
     return 0;
 }
+
+// How to use:
+// source ./emsdk/emsdk_env.sh
+// emcc snake.cpp -o index.html --shell-file shell_minimal.html -s USE_SDL=2 -s WASM=1 -s ALLOW_MEMORY_GROWTH=1
+// emrun --no_browser --port 8080 .
